@@ -1,0 +1,69 @@
+.player{
+    min-height: 20vh;
+    align-items: center;
+    justify-content: space-between;
+    .time-control{
+        width: 50%;
+        input{
+            width: 100%;
+            padding: 1rem 0rem;
+            -webkit-appearance: none;
+            background: transparent;
+            cursor: pointer;
+            &:focus{
+                outline: none;
+            }
+            &::-webkit-slider-thumb, &::-moz-range-thumb{
+                -webkit-appearance: none;
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+        p{
+            padding: 1rem;
+        }
+    }
+
+    .play-control{
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        width: 35%;
+        cursor: pointer;
+        
+        & > *{
+            width: 50px;
+            height: 50px;
+            border-radius: 25%;
+        }
+    }
+}
+.track{
+    border: 1px solid black;
+    background-color: lightblue;
+    width: 100%;
+    height: 2rem;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    .animate-track{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgb(204,204,204);
+        height: 100%;
+        width: 100%;
+        transform: translateX(0%);
+        pointer-events: none;
+    }
+}
+
+@media screen and (max-width:768px){
+    .time-control{
+        width: 90%;
+    }
+    .play-control{
+        border: 1px solid red;
+        width: 60%;
+    }
+}
