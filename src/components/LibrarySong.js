@@ -31,7 +31,11 @@ const LibrarySong = ({
             className={`library-song flex ${song.active ? 'selected' : ''}`}
             role="menuitem"
         >
-            <img src={song.cover} alt={song.name} className={`${isPlaying ? "cover-rotate" : null}`}/>
+            <img
+                src={song.cover}
+                alt={song.name}
+                className={`${isPlaying ? 'cover-rotate' : null}`}
+            />
             <div className="song-description flex-col">
                 <h4>{song.name}</h4>
                 <p>{song.artist}</p>
